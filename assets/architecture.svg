@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="230" viewBox="0 0 900 230" font-family="'Fira Code','JetBrains Mono','Cascadia Code',Consolas,monospace">
+  <defs>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00F5A0"/>
+      <stop offset="100%" stop-color="#00D9F5"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .h { fill: #FFFFFF; font-size: 11px; font-weight: 700; }
+      .n { fill: #00F5A0; font-size: 9px; }
+      .d { fill: #8B949E; font-size: 9px; }
+      .m { fill: #00D9F5; font-size: 8.5px; }
+      .c { fill: #6E7681; font-size: 9px; }
+      .flow { stroke-dasharray: 6 8; animation: flow 1.2s linear infinite; }
+      @keyframes flow { to { stroke-dashoffset: -14; } }
+      .pk { animation: pk 2.4s linear infinite; }
+      .pk2 { animation-delay: 0.6s } .pk3 { animation-delay: 1.2s } .pk4 { animation-delay: 1.8s }
+      @keyframes pk { 0% { opacity: 0; transform: translateX(0);} 10% { opacity: 1;} 90% { opacity: 1;} 100% { opacity: 0; transform: translateX(42px);} }
+      .card { animation: rise 0.6s ease-out both; }
+      .c1 { animation-delay: 0.1s } .c2 { animation-delay: 0.25s } .c3 { animation-delay: 0.4s } .c4 { animation-delay: 0.55s } .c5 { animation-delay: 0.7s }
+      @keyframes rise { from { opacity: 0; transform: translateY(8px);} to { opacity: 1; transform: translateY(0);} }
+      .beat { animation: beat 1.6s ease-in-out infinite; }
+      @keyframes beat { 0%,100% { opacity: 0.4;} 50% { opacity: 1;} }
+    </style>
+  </defs>
+
+  <rect x="1" y="1" width="898" height="228" rx="12" fill="#0D1117" stroke="#21262D"/>
+
+  <!-- Header -->
+  <circle class="beat" cx="22" cy="22" r="4" fill="#00F5A0"/>
+  <text x="34" y="26" class="h" letter-spacing="1.5">FULL-STACK &amp; 3D GRAPHICS <tspan fill="#00F5A0">PIPELINE ARCHITECTURE</tspan></text>
+  <text x="878" y="26" text-anchor="end" class="c">REAL-TIME DATA STREAM  //  LATENCY &lt; 20ms</text>
+  <line x1="14" y1="38" x2="886" y2="38" stroke="#21262D"/>
+
+  <!-- Connectors -->
+  <g stroke="url(#edge)" stroke-width="1.5" fill="none">
+    <line class="flow" x1="176" y1="118" x2="218" y2="118"/>
+    <line class="flow" x1="348" y1="118" x2="390" y2="118"/>
+    <line class="flow" x1="520" y1="118" x2="562" y2="118"/>
+    <line class="flow" x1="692" y1="118" x2="734" y2="118"/>
+  </g>
+  <g fill="#00F5A0" filter="url(#glow)">
+    <circle class="pk" cx="176" cy="118" r="3"/>
+    <circle class="pk pk2" cx="348" cy="118" r="3"/>
+    <circle class="pk pk3" cx="520" cy="118" r="3"/>
+    <circle class="pk pk4" cx="692" cy="118" r="3"/>
+  </g>
+
+  <!-- Layer 01 -->
+  <g class="card c1">
+    <rect x="16" y="56" width="160" height="124" rx="8" fill="#101820" stroke="#00F5A0" stroke-opacity="0.6"/>
+    <text x="28" y="74" class="n">LAYER 01</text>
+    <text x="28" y="90" class="h">CLIENT EDGE</text>
+    <text x="28" y="110" class="d">React 19 / Next.js 14</text>
+    <text x="28" y="124" class="d">React Native / Expo</text>
+    <text x="28" y="138" class="d">Tailwind &amp; Framer</text>
+    <rect x="28" y="152" width="136" height="16" rx="3" fill="#00F5A0" fill-opacity="0.12"/>
+    <text x="96" y="163" text-anchor="middle" class="m">STATUS: SSR &amp; HYDRATED</text>
+  </g>
+
+  <!-- Layer 02 -->
+  <g class="card c2">
+    <rect x="188" y="56" width="160" height="124" rx="8" fill="#101820" stroke="#00D9F5" stroke-opacity="0.6"/>
+    <text x="200" y="74" class="n">LAYER 02</text>
+    <text x="200" y="90" class="h">3D WEBGL ENGINE</text>
+    <text x="200" y="110" class="d">Three.js / Canvas</text>
+    <text x="200" y="124" class="d">GLSL Custom Shaders</text>
+    <text x="200" y="138" class="d">GLTF / Physics Engine</text>
+    <rect x="200" y="152" width="136" height="16" rx="3" fill="#00D9F5" fill-opacity="0.12"/>
+    <text x="268" y="163" text-anchor="middle" class="m">60 FPS // GPU SYNC</text>
+  </g>
+
+  <!-- Layer 03 -->
+  <g class="card c3">
+    <rect x="360" y="56" width="160" height="124" rx="8" fill="#101820" stroke="#00F5A0" stroke-opacity="0.6"/>
+    <text x="372" y="74" class="n">LAYER 03</text>
+    <text x="372" y="90" class="h">API GATEWAY</text>
+    <text x="372" y="110" class="d">RESTful &amp; GraphQL</text>
+    <text x="372" y="124" class="d">WebSockets (Realtime)</text>
+    <text x="372" y="138" class="d">JWT / CORS / Auth</text>
+    <rect x="372" y="152" width="136" height="16" rx="3" fill="#00F5A0" fill-opacity="0.12"/>
+    <text x="440" y="163" text-anchor="middle" class="m">EDGE LOAD BALANCED</text>
+  </g>
+
+  <!-- Layer 04 -->
+  <g class="card c4">
+    <rect x="532" y="56" width="160" height="124" rx="8" fill="#101820" stroke="#00D9F5" stroke-opacity="0.6"/>
+    <text x="544" y="74" class="n">LAYER 04</text>
+    <text x="544" y="90" class="h">BACKEND CORE</text>
+    <text x="544" y="110" class="d">Node.js / Express</text>
+    <text x="544" y="124" class="d">NestJS Architecture</text>
+    <text x="544" y="138" class="d">Async Event Queues</text>
+    <rect x="544" y="152" width="136" height="16" rx="3" fill="#00D9F5" fill-opacity="0.12"/>
+    <text x="612" y="163" text-anchor="middle" class="m">FAULT-TOLERANT</text>
+  </g>
+
+  <!-- Layer 05 -->
+  <g class="card c5">
+    <rect x="704" y="56" width="180" height="124" rx="8" fill="#101820" stroke="#7B61FF" stroke-opacity="0.7"/>
+    <text x="716" y="74" class="n">LAYER 05</text>
+    <text x="716" y="90" class="h">DATA &amp; CACHING</text>
+    <text x="716" y="110" class="d">PostgreSQL &amp; MySQL</text>
+    <text x="716" y="124" class="d">Redis In-Memory Cache</text>
+    <text x="716" y="138" class="d">Firebase / Cloud Store</text>
+    <rect x="716" y="152" width="156" height="16" rx="3" fill="#7B61FF" fill-opacity="0.15"/>
+    <text x="794" y="163" text-anchor="middle" class="m">ACID // SUB-MS QUERY</text>
+  </g>
+
+  <!-- Footer -->
+  <line x1="14" y1="196" x2="886" y2="196" stroke="#21262D"/>
+  <text x="22" y="214" class="c">ARCHITECTURE: <tspan fill="#C9D1D9">MICROSERVICES &amp; 3D CLIENTS</tspan></text>
+  <text x="320" y="214" class="c">THROUGHPUT: <tspan fill="#C9D1D9">OPTIMIZED FOR SCALE</tspan></text>
+  <text x="560" y="214" class="c">DEPLOYMENT: <tspan fill="#C9D1D9">CI/CD DOCKER &amp; VERCEL</tspan></text>
+  <text x="878" y="214" text-anchor="end" class="c">UPTIME: <tspan fill="#00F5A0">99.99%</tspan></text>
+</svg>

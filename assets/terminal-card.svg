@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="380" viewBox="0 0 900 380" font-family="'Fira Code','JetBrains Mono','Cascadia Code',Consolas,monospace">
+  <defs>
+    <linearGradient id="border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00F5A0"/>
+      <stop offset="50%" stop-color="#00D9F5"/>
+      <stop offset="100%" stop-color="#7B61FF"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00F5A0"/>
+      <stop offset="100%" stop-color="#00D9F5"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#00F5A0" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <style>
+      .t { fill: #C9D1D9; font-size: 13px; }
+      .k { fill: #7B61FF; }
+      .p { fill: #00F5A0; }
+      .s { fill: #FFB86C; }
+      .c { fill: #6E7681; }
+      .b { fill: #00D9F5; }
+      .cursor { animation: blink 1s steps(1) infinite; }
+      @keyframes blink { 50% { opacity: 0; } }
+      .line { opacity: 0; animation: type 0.4s ease-out forwards; }
+      .l1 { animation-delay: 0.2s } .l2 { animation-delay: 0.6s } .l3 { animation-delay: 1.0s }
+      .l4 { animation-delay: 1.4s } .l5 { animation-delay: 1.8s } .l6 { animation-delay: 2.2s }
+      .l7 { animation-delay: 2.6s } .l8 { animation-delay: 3.0s } .l9 { animation-delay: 3.4s }
+      .l10 { animation-delay: 3.8s } .l11 { animation-delay: 4.4s }
+      @keyframes type { to { opacity: 1; } }
+      .pulse { animation: pulse 2s ease-in-out infinite; transform-origin: 700px 215px; }
+      @keyframes pulse { 0%,100% { opacity: 0.35; transform: scale(1);} 50% { opacity: 0.9; transform: scale(1.06);} }
+      .spin { animation: spin 8s linear infinite; transform-origin: 700px 215px; }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      .dot { animation: blink 1.2s steps(1) infinite; }
+    </style>
+  </defs>
+
+  <!-- Card body -->
+  <rect x="1" y="1" width="898" height="378" rx="14" fill="#0D1117" stroke="url(#border)" stroke-width="1.5"/>
+  <rect x="1" y="1" width="898" height="378" rx="14" fill="url(#grid)"/>
+
+  <!-- Title bar -->
+  <rect x="1" y="1" width="898" height="36" rx="14" fill="#161B22"/>
+  <rect x="1" y="24" width="898" height="13" fill="#161B22"/>
+  <circle cx="22" cy="19" r="6" fill="#FF5F57"/>
+  <circle cx="42" cy="19" r="6" fill="#FEBC2E"/>
+  <circle cx="62" cy="19" r="6" fill="#28C840"/>
+  <text x="450" y="23" text-anchor="middle" fill="#8B949E" font-size="12">Phawatcharakorn@prod-system: ~/architect_profile</text>
+
+  <!-- Status strip -->
+  <g font-size="10">
+    <circle class="dot" cx="26" cy="56" r="3.5" fill="#00F5A0"/>
+    <text x="36" y="60" class="p">SYSTEM: ONLINE</text>
+    <text x="150" y="60" class="c">UID: 0x1F3A9C</text>
+    <text x="270" y="60" class="c">LATENCY: &lt; 15ms</text>
+    <text x="400" y="60" class="c">CLEARANCE: LEVEL-07 ROOT</text>
+    <text x="560" y="60" class="c">UPTIME: 99.99%</text>
+    <text x="874" y="60" text-anchor="end" class="b">FPS: 60 [STABLE]</text>
+  </g>
+  <line x1="14" y1="70" x2="886" y2="70" stroke="#21262D"/>
+
+  <!-- Left: terminal text -->
+  <g class="t">
+    <text class="line l1" x="24" y="98"><tspan class="p">host@prod-system</tspan><tspan class="c">:~$</tspan> whoami --role --architecture</text>
+    <text class="line l2" x="24" y="122" fill="#FFFFFF" font-size="22" font-weight="700">Winny</text>
+    <text class="line l3 p" x="24" y="142" font-size="11">FULL-STACK DEVELOPER  //  CREATIVE TECHNOLOGIST</text>
+    <text class="line l4 c" x="24" y="160" font-size="11">Specializing in scalable web systems, clean architecture and delightful UX.</text>
+
+    <text class="line l5" x="24" y="192"><tspan class="c">// ~/.architect_profile.ts</tspan></text>
+    <text class="line l6" x="24" y="212"><tspan class="k">interface</tspan> <tspan class="s">ArchitectProfile</tspan> {</text>
+    <text class="line l7" x="44" y="232">engineer: <tspan class="p">"Winny"</tspan>;</text>
+    <text class="line l8" x="44" y="252">clearance: <tspan class="p">"Root / Level-07 Principal"</tspan>;</text>
+    <text class="line l9" x="44" y="272">coreCompetencies: [<tspan class="p">"React"</tspan>, <tspan class="p">"Next.js"</tspan>, <tspan class="p">"Node.js"</tspan>, <tspan class="p">"PostgreSQL"</tspan>];</text>
+    <text class="line l10" x="44" y="292">philosophy: <tspan class="p">"Write code that works. Then write code that lasts."</tspan>;</text>
+    <text class="line l10" x="24" y="312">}</text>
+
+    <text class="line l11" x="24" y="344"><tspan class="p">host@prod-system</tspan><tspan class="c">:~$</tspan> npm run build:optimized &amp;&amp; deploy --prod</text>
+    <text class="line l11 p" x="24" y="362" font-size="12">✔ Pipeline passed with 0 warnings. Micro-services live and monitored.<tspan class="cursor">▍</tspan></text>
+  </g>
+
+  <!-- Right: telemetry gauge -->
+  <line x1="580" y1="84" x2="580" y2="366" stroke="#21262D"/>
+  <text x="700" y="100" text-anchor="middle" class="c" font-size="10" letter-spacing="2">HOLOGRAPHIC TELEMETRY</text>
+
+  <circle class="pulse" cx="700" cy="215" r="72" fill="none" stroke="#00F5A0" stroke-opacity="0.35" stroke-width="1"/>
+  <circle cx="700" cy="215" r="62" fill="#0D1117" stroke="#21262D" stroke-width="10"/>
+  <circle class="spin" cx="700" cy="215" r="62" fill="none" stroke="url(#ring)" stroke-width="10" stroke-linecap="round" stroke-dasharray="300 90" filter="url(#glow)"/>
+  <circle cx="700" cy="215" r="48" fill="#0B1F1A"/>
+  <text x="700" y="210" text-anchor="middle" fill="#00F5A0" font-size="30" font-weight="700" filter="url(#glow)">S+</text>
+  <text x="700" y="232" text-anchor="middle" class="c" font-size="9" letter-spacing="2">STAFF_ARCHITECT</text>
+
+  <!-- Mini stats -->
+  <g font-size="10">
+    <rect x="600" y="300" width="94" height="46" rx="6" fill="#161B22" stroke="#21262D"/>
+    <text x="647" y="318" text-anchor="middle" class="c">PROJECTS</text>
+    <text x="647" y="337" text-anchor="middle" fill="#FFFFFF" font-size="15" font-weight="700">25+</text>
+
+    <rect x="706" y="300" width="94" height="46" rx="6" fill="#161B22" stroke="#21262D"/>
+    <text x="753" y="318" text-anchor="middle" class="c">COMMITS</text>
+    <text x="753" y="337" text-anchor="middle" fill="#FFFFFF" font-size="15" font-weight="700">1,200+</text>
+
+    <rect x="812" y="300" width="74" height="46" rx="6" fill="#161B22" stroke="#21262D"/>
+    <text x="849" y="318" text-anchor="middle" class="c">UPTIME</text>
+    <text x="849" y="337" text-anchor="middle" fill="#00F5A0" font-size="15" font-weight="700">99.9%</text>
+  </g>
+</svg>
